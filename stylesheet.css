@@ -1,0 +1,364 @@
+@charset "utf-8";
+/* CSS Document */
+h2 {
+    color: #2584FF;
+}
+p {
+    color: red;
+}
+li { 
+     color: red;
+	
+}
+
+.ui-icon-abc {
+    background-image: url('home.png');
+    background-size: 60px 60px;
+}
+
+.footer {
+	margin:15px;
+	
+	}
+
+.video{ 
+
+margin:0 auto; 
+width: 500px;
+
+}
+#mySidenav {
+    height: 80%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    left: 0;
+    background-color: #f1f1f1; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 52px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+   #mySidenav button {font-size: 14px;}
+   
+/* The navigation menu links */
+#mySidenav a {
+    padding: 2px 4px 4px 1px;
+    text-decoration: none;
+    font-size: 10px;
+    color: #818181;
+    display: block;
+    transition: 0.3s
+}
+
+/* When you mouse over the navigation links, change their color */
+#mySidenav a:hover, .offcanvas a:focus{
+    color: #f44336;
+}
+
+/* Position and style the close button (top right corner) */
+#mySidenav .closebtn {
+	position: absolute;
+	top: 113px;
+	right: 79px;
+	font-size: 15px;
+	margin-left: 50px;
+	width: 22px;
+	height: 24px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+    transition: margin-left .5s;
+    padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    #mySidenav {padding-top: 60px;}
+    #mySidenav button {font-size: 6px;}
+}
+
+
+
+#mapselection {
+        height: 250px;
+		width: 500px;
+       }
+
+ #map {
+        height: 400px;
+        width: 100%;
+       }
+	   
+	   .title {
+        font-weight: bold;
+      }
+      #infowindow-content {
+        display: none;
+      }
+      #map #infowindow-content {
+        display: inline;
+      }
+
+ 
+ .wrapper {
+    text-align: center;
+}
+
+.active{
+	 padding: 4px 8px 8px 16px;
+    text-decoration: none;
+    font-size: 16px;
+    color: red;
+    display: block;
+    transition: 0.3s;
+	
+	}
+.video-container {
+	position:relative;
+	padding-bottom:56.25%;
+	padding-top:30px;
+	height:0;
+	overflow:hidden;
+}
+
+.video-container iframe, .video-container object, .video-container embed {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+}
+#myInput {
+    background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+    background-position: 10px 12px; /* Position the search icon */
+    background-repeat: no-repeat; /* Do not repeat the icon image */
+    width: 100%; /* Full-width */
+    font-size: 16px; /* Increase font-size */
+    padding: 12px 20px 12px 40px; /* Add some padding */
+    border: 1px solid #ddd; /* Add a grey border */
+    margin-bottom: 12px; /* Add some space below the input */
+}
+
+#myTable {
+    border-collapse: collapse; /* Collapse borders */
+    width: 100%; /* Full-width */
+    border: 1px solid #ddd; /* Add a grey border */
+    font-size: 18px; /* Increase font-size */
+}
+
+#myTable th, #myTable td {
+    text-align: left; /* Left-align text */
+    padding: 12px; /* Add padding */
+}
+
+#myTable tr {
+    /* Add a bottom border to all table rows */
+    border-bottom: 1px solid #ddd; 
+}
+
+#myTable tr.header, #myTable tr:hover {
+    /* Add a grey background color to the table header and on hover */
+    background-color: #f1f1f1;
+}
+
+#popup{
+    width: 100%;
+	height: 100%;
+    left: 10%;
+    right: 10%;
+	position:absolute;
+}
+
+ul.tab {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+/* Float the list items side by side */
+ul.tab li {float: left;}
+
+/* Style the links inside the list items */
+ul.tab li a {
+    display: inline-block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of links on hover */
+ul.tab li a:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+ul.tab li a:focus, .active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
+/* Popup container - can be anything you want */
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* The actual popup */
+.popup .popuptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}
+
+
+input {
+   width: 50px;
+   height: 25px;
+ }
+ 
+ #navContent{
+      margin:auto;
+      width:800px;
+      height:400px;
+      position:relative;
+      overflow:hidden;
+      }
+#game1{
+      margin:auto;
+      width:800px;
+      height:400px;
+      right:0px;
+      position:absolute;
+      }
+#game2{
+      margin:auto;
+      width:800px;
+      height:400px;
+      right:-800px;
+      position:absolute;
+      }
+      .questionText{
+      font-size:27px;
+      color:#F30;
+      }
+.option{
+      width:400px;
+      height:30px;
+      margin:15px;
+      font-size:18px;
+      color:#FFFFFF;
+      padding:2px;
+      padding-left:10px;
+      border: 2px solid white;
+      cursor:pointer;
+      background-color:#3399FF;
+      }
+.option:hover{
+      border:#FC0 solid 2px;
+      color:#FC0;
+      }
+	  
+	  #topbar{
+      height:50px;
+      margin:auto;
+      margin-top:50px;
+      color:#09F;
+      font-size:36px;
+      font-family:Arial, Helvetica, sans-serif;
+      width:800px;
+      border-bottom:blue 1px;
+      }
+.spacer{
+      height:30px;
+      }
+       .feedback1{
+      width:150px;
+      padding:5px;
+      font-size:30px;
+      color:#FFFFCC;
+      background-color:#09F;
+      font-family:Arial, Helvetica, sans-serif;
+      text-align:center;
+      }
+           
+.feedback2{
+      width:150px;
+      padding:5px;
+      font-size:30px;
+      color:#FFFFCC;
+      background-color:#F00;
+      font-family:Arial, Helvetica, sans-serif;
+      text-align:center;
+      }
+	  
+      @media screen and (max-width:800px) {
+	#topbar{margin-left:1%;margin-right:1%;width:96%;}
+	
+	#navContent{margin:1%;width:98%;}	
+	#game1{margin:1%;width:98%;}
+	#game2{margin:1%;width:98%;}
+}
+
+@media screen and (max-width:460px) {
+	.option{width:80%;margin-top:5%;}
+} 

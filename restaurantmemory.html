@@ -1,0 +1,101 @@
+<!doctype html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>GHunt Restaurant Memory Game</title>
+  
+
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="../css/memorygame.css">
+  
+  <style>
+    body{
+      font-family:Helvetica, Arial, Verdana;
+      text-align: center;
+    }
+    
+    #restaurant-memorygame{
+      margin:auto;
+      height: 400px;
+        width: 100%;
+    }
+    
+    .text-style1{
+      font-size:14pt;
+      color:#56605f;
+      font-weight:normal;
+      text-shadow: 1px 1px 1px #fff;
+      margin:0;
+      line-height:24pt;
+    }
+    
+    .reset-button{
+      margin: 0 0 1.5em 0;
+    }
+    
+  </style>
+
+</head>
+<body>
+  
+  <h1>GHunt Restaraunt Memory Game</h1>
+  
+  <div id="main" role="main">
+    
+    <div id="restaurant-memorygame" class="quizy-memorygame">
+      <ul>
+          <li class="match1">
+            <img src="img/bbq.jpg">
+          </li>
+          <li class="match2">
+            <img src="img/salmon.jpg">
+          </li>
+          <li class="match3">
+            <img src="img/dessert.jpg">
+          </li>
+          <li class="match4">
+            <img src="img/bread.jpg">
+          </li>
+          
+          <li class="match1">
+            <br><br><br><p class="text-style1">BBQ</p>
+          </li>
+          <li class="match2">
+            <br><br><br><p class="text-style1">Salmon</p>
+          </li>
+          <li class="match3">
+            <br><br><br><p class="text-style1">Dessert</p>
+          </li>
+          <li class="match4">
+            <br><br><br><p class="text-style1">Bread</p>
+          </li>
+          
+      </ul>
+    </div>
+    
+    
+    <div class="reset-button">
+      <a id="restart" href="">Reset game</a>
+    </div>
+    
+    
+
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="../js/jquery-1.7.1.min.js"><\/script>')</script>
+  <script src="../js/jquery-ui-1.8.17.custom.min.js"></script>
+  
+  <script src="../js/jquery.flip.min.js"></script>
+  <script src="../js/jquery.quizymemorygame.js"></script>
+  
+  <script>
+    var quizyParams = {itemWidth: 156, itemHeight: 156, itemsMargin:40, colCount:4, animType:'flip' , flipAnim:'tb', animSpeed:250, resultIcons:true, randomised:true }; 
+    $('#restaurant-memorygame').quizyMemoryGame(quizyParams);
+    $('#restart').click(function(){
+      $('#restaurant-memorygame').quizyMemoryGame('restart');
+      return false;
+    });
+  </script>
+
+</body>
+</html>

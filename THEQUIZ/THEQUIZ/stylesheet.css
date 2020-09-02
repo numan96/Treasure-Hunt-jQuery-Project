@@ -1,0 +1,128 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+    background-color: powderblue;
+}
+h2,h3 {
+    color: #2584FF;
+}
+p {
+    color: red;
+}
+li { 
+     color: red;
+	
+}
+
+.ui-icon-abc {
+    background-image: url('home.png');
+    background-size: 60px 60px;
+}
+
+.footer {
+	margin:15px;
+	
+	}
+
+
+.video{ 
+
+margin:0 auto; 
+width: 400px;
+height: 400px;
+
+}
+
+
+input {
+   width: 50px;
+   height: 25px;
+ }
+ 
+ #navContent{
+      margin:auto;
+      width:800px;
+      height:400px;
+      position:relative;
+      overflow:hidden;
+      }
+#game1{
+      margin:auto;
+      width:800px;
+      height:400px;
+      right:0px;
+      position:absolute;
+      }
+#game2{
+      margin:auto;
+      width:800px;
+      height:400px;
+      right:-800px;
+      position:absolute;
+      }
+      .questionText{
+      font-size:27px;
+      color:#F30;
+      }
+.option{
+      width:400px;
+      height:30px;
+      margin:15px;
+      font-size:18px;
+      color:#FFFFFF;
+      padding:2px;
+      padding-left:10px;
+      border: 2px solid white;
+      cursor:pointer;
+      background-color:#3399FF;
+      }
+.option:hover{
+      border:#FC0 solid 2px;
+      color:#FC0;
+      }
+	  
+	  #topbar{
+      height:50px;
+      margin:auto;
+      margin-top:50px;
+      color:#09F;
+      font-size:36px;
+      font-family:Arial, Helvetica, sans-serif;
+      width:800px;
+      border-bottom:blue 1px;
+      }
+.spacer{
+      height:30px;
+      }
+       .feedback1{
+      width:150px;
+      padding:5px;
+      font-size:30px;
+      color:#FFFFCC;
+      background-color:#09F;
+      font-family:Arial, Helvetica, sans-serif;
+      text-align:center;
+      }
+           
+.feedback2{
+      width:150px;
+      padding:5px;
+      font-size:30px;
+      color:#FFFFCC;
+      background-color:#F00;
+      font-family:Arial, Helvetica, sans-serif;
+      text-align:center;
+      }
+	  
+      @media screen and (max-width:800px) {
+	#topbar{margin-left:1%;margin-right:1%;width:96%;}
+	
+	#navContent{margin:1%;width:98%;}	
+	#game1{margin:1%;width:98%;}
+	#game2{margin:1%;width:98%;}
+}
+
+@media screen and (max-width:460px) {
+	.option{width:80%;margin-top:5%;}
+} 

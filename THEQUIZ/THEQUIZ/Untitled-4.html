@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8">
+<title>GHunt Quiz Game</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"> 
+<link rel="stylesheet" href="stylesheet.css">
+<script type="text/javascript" src="https://gc.kis.scr.kaspersky-labs.com/2C6AE740-5FF3-534C-A5B4-D997C2F75EFB/main.js" charset="UTF-8"></script><script type="text/javascript" src="https://gc.kis.scr.kaspersky-labs.com/2C6AE740-5FF3-534C-A5B4-D997C2F75EFB/main.js" charset="UTF-8"></script><script src="http://code.jquery.com/jquery-1.10.2.min.js"></script> 
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+     	<script src="controller.js"></script>
+        	<script src="jquery.js"></script>
+            <script type="text/javascript">
+
+// Add a script element as a child of the body
+ function downloadJSAtOnload() {
+ var element = document.createElement("script");
+ element.src = "defer.js";
+ document.body.appendChild(element);
+ }
+
+ // Check for browser support of event handling capability
+ if (window.addEventListener)
+ window.addEventListener("load", downloadJSAtOnload, false);
+ else if (window.attachEvent)
+ window.attachEvent("onload", downloadJSAtOnload);
+ else window.onload = downloadJSAtOnload;
+
+</script>
+</head>
+
+<body>
+  <div data-role="page" id="contactus">
+<script>
+$(document).ready(function(){
+ $(".mainmenu").hide();
+  $(".title").show();
+    $(".menuicon").click(function(){
+		$(".title").toggle();
+		  $(".mainmenu").toggle();
+  
+		
+    });    
+});
+</script>
+
+<div data-role="header" data-position="fixed" >
+  <div align="center"><img src="menu.jpg" width="26" height="21" align="middle" class="menuicon"><img src="imageedit_2_7868692569.png" width="170" height="60" align="middle"><a href="homepage.html"><img src="home.png" alt="" width="41" height="34" align="middle"></a></div>
+</div>
+
+
+      	<div id="topbar">Quiz</div>
+      	<div class="spacer"></div>
+      	<div id="navContent">
+     	 	<div id="game1"></div>
+     		<div id="game2"></div>
+      	</div>
+
+<div class="mainmenu"><ul data-role="listview" data-inset="true">
+		<li><a href="contactus.html">Contact Us</a></li>
+		<li><a href="rules.html">Rules</a></li>
+	</ul>
+
+</div>
+
+<div data-role="footer" data-position="fixed">
+<h4>Page 2 Footer</h4>
+</div>
+</div>
+</div> 
+<h1>I wait 2 seconds then ...</h1>
+<p id="inner"></p>
+</body>
+</html>

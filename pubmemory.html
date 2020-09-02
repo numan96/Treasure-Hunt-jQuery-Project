@@ -1,0 +1,123 @@
+<!doctype html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>GHunt Pub Memory Game</title>
+  
+
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="memorygame.css">
+  
+  <style>
+    body{
+      font-family:Helvetica, Arial, Verdana;
+      text-align: center;
+    }
+    
+    #pub-memorygame{
+      margin:auto;
+      height: 400px;
+        width: 100%;
+    }
+    
+    .text-style1{
+      font-size:14pt;
+      color:#56605f;
+      font-weight:normal;
+      text-shadow: 1px 1px 1px #fff;
+      margin:0;
+      line-height:24pt;
+	}
+    
+    .reset-button{
+      margin: 0 0 1.5em 0;
+    }
+    
+  </style>
+
+</head>
+<body>
+  
+  <h1>GHunt Pub Memory Game</h1>
+  
+  <div id="main" role="main">
+    
+    <div id="pub-memorygame" class="quizy-memorygame">
+      <ul>
+          <li class="match1">
+            <img src="brandy.jpg">
+          </li>
+          <li class="match2">
+            <img src="wine.jpg">
+          </li>
+          <li class="match3">
+            <img src="beer.jpg">
+          </li>
+          <li class="match4">
+            <img src="martini.jpg">
+          </li>
+          
+          <li class="match1">
+            <br><br><br><p class="text-style1">Brandy</p>
+          </li>
+          <li class="match2">
+            <br><br><br><p class="text-style1">Wine</p>
+          </li>
+          <li class="match3">
+            <br><br><br><p class="text-style1">Beer</p>
+          </li>
+          <li class="match4">
+            <br><br><br><p class="text-style1">Martini</p>
+          </li>
+          
+      </ul>
+    </div>
+    
+    
+    <div class="reset-button">
+      <a id="restart" href="">Reset game</a>
+    </div>
+     <div id="game2" style="display: none;"></div>
+
+        <button type="button" class="button" onClick="updatePoints($('#game2').html())">Back to Map (Game will be marked as complete)</button>
+ <script>
+ 
+function updatePoints(score) {
+   var email = '<?php echo $session_value; ?>';
+  $.ajax({ // JQuery ajax function
+      type: "POST", // Submitting Method
+      url: "updatepoints2.php", // PHP processor
+      data: 'score='+ score +'&email=' + email,
+      dataType: "html", // type of returned data
+      success: function(data) {
+		  // if ajax function results success
+	window.location.href = "malamap.php";
+	//change to whatever map linked to quiz.
+	
+  }
+  
+      });
+	  return false;
+}
+ </script>   
+    
+
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="jquery-1.7.1.min.js"><\/script>')</script>
+  <script src="jquery-ui-1.8.17.custom.min.js"></script>
+  
+  <script src="jquery.flip.min.js"></script>
+  <script src="jquery.quizymemorygame.js"></script>
+  
+  <script>
+    var quizyParams = {itemWidth: 156, itemHeight: 156, itemsMargin:40, colCount:4, animType:'flip' , flipAnim:'tb', animSpeed:250, resultIcons:true, randomised:true }; 
+    $('#pub-memorygame').quizyMemoryGame(quizyParams);
+    $('#restart').click(function(){
+      $('#pub-memorygame').quizyMemoryGame('restart');
+      return false;
+    });
+  </script>
+
+</body>
+</html>
